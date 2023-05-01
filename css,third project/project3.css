@@ -1,0 +1,1328 @@
+/******************************************************* Start Variables  ****************************/
+:root {
+    --main-color:#19c8fa;
+    --text-color:#e2dee0;
+    --text-color2: #777 ;
+    --background-black:#343235;
+    --background-white: #FDFBFC;
+    --standard-padding: 100px;
+    --font-weight: normal;
+    --cursor-pointer: pointer;
+    --text-uppercase: uppercase ;
+    --width-100: 100%;
+}
+/************************************************** End Variables ***********************************/
+/******************************************************* Start Component  ****************************/
+/* Start Header  */
+.head-text  {
+    padding-top:30px ;
+    text-align: center;
+}
+.head-text h2 {
+    position: relative;
+    font-weight: var(--font-weight);
+    font-size: 30px;
+    text-transform: var(--text-uppercase);
+    letter-spacing: 3px;
+    margin-bottom: 80px;
+}
+.head-text h2::before {
+    content: "";
+    position: absolute;
+    background-color: #333;
+    width: 120px;
+    height: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    bottom: -15px;
+}
+.head-text h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) ;
+    -webkit-transform: translateX(-50%) ;
+    -moz-transform: translateX(-50%) ;
+    -ms-transform: translateX(-50%) ;
+    -o-transform: translateX(-50%) ;
+    border: 2px solid #333;
+    width: 15px;
+    height: 15px;
+    border-radius: 50% ;
+    -webkit-border-radius: 50% ;
+    -moz-border-radius: 50% ;
+    -ms-border-radius: 50% ;
+    -o-border-radius: 50% ;
+    bottom: -22px;
+    background-color: white;
+}
+
+.head-text p {
+    color:var(--text-color2);
+    margin: 0 auto 50px;
+    line-height: 1.6; 
+}
+@media (max-width: 767px) {
+    .head p  {
+        margin-top: 30px;
+        
+    }
+}
+/* End Header  */
+/******************************************************* End Component  ****************************/
+/************************************************** Start Global Rules ********************************/
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {scroll-behavior: smooth;}
+
+body {font-family: 'Open Sans', sans-serif;}
+
+ul {list-style: none;}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/************************************************** End Global Rules ***************************/
+/************************************************** Start Media **********************************/
+/* ************************************************* Small ************************************* */
+@media (min-width: 768px ){.container {width: 750px;}}
+/* ************************************** Medium  ***************************** */
+@media (min-width: 992px){.container {width: 970px;}}
+/* ************************************ Large  ******************************* */
+@media (min-width: 1200px){.container {width: 1170px;}}
+/********************************** End Media ******************************/
+/********************************* Start header  *********************************/
+header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: absolute;
+    left: 0;
+    width: var(--width-100);
+    z-index: 2;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+header .container::after{
+    content: "";
+    position: absolute;
+    height: 1px;
+    background-color: var(--main-color);
+    bottom: 0;
+    width:calc(100% - 30px);
+} 
+
+header .logo img {
+    width: 200px;
+    height: 75px;
+}
+
+header  nav  {
+    flex: 1;
+    display: flex;
+    letter-spacing: -1px;
+    justify-content: flex-end;
+    margin-right: 15px;
+}
+
+header  nav ul  {
+    display: flex;
+    padding: 15px;
+}
+
+@media (max-width: 767px ) {
+    header  nav ul {display: none;}
+
+    header nav .toggle-menu:hover + ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        color: var(--text-color);
+        background-color: rgb(0 0 0 / 70%) ;
+        width: var(--width-100);
+    }
+}
+
+header  nav ul a {display: block;}
+
+header nav i {padding-right: 30px;}
+
+header nav i:hover {color: var(--main-color);} 
+
+.toggle-menu {
+    color: var(--text-color);
+    font-size: 22px;
+}
+
+@media (min-width: 768px ){.container nav .toggle-menu {display: none;}}
+
+header ul li a  {
+    color: var(--text-color);
+    margin: 15px;
+    text-decoration: none;
+    text-transform: var(--text-uppercase);
+    font-weight: bold;
+}
+
+header ul li a:hover {
+    color: var(--main-color);
+    border-bottom: 1px solid var(--main-color) ;
+} 
+
+header .container .first-icon {
+    margin-right: 20px;
+    color: var(--text-color);
+}
+
+header .container .first-icon i {
+    font-size: 30px;
+    position: relative;
+    cursor: var(--cursor-pointer);
+}
+
+header .container .first-icon i:hover  { color: var(--main-color);} 
+
+header .container .first-icon i::after {
+    content: "";
+    background-color:var(--text-color);
+    position: absolute;
+    width: 2px;
+    height: 30px;
+    left: -20px;
+}
+/********************************* End header  *********************************/
+/********************************* Start landing  *********************************/
+.landing {
+    min-height: 100vh;
+    background-color: var(--background-black);
+    background-image: url("../photos/Trumpwallpapers\ -\ Owl\ Wallpapers.jfif");
+    background-size: cover;
+    position: relative;
+}
+.landing .overlay {
+    position: absolute;
+    width:100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(0 0 0 / 25%) ;
+}
+.landing .text {
+    position: absolute;
+    background-color: rgb(15 116 143 / 70%);
+    left: 0;
+    width: 50%;
+    top: 40%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.landing .text .content {
+    padding-left: 20%;
+    padding-top: 10px;
+}
+
+@media (max-width: 767px) {
+    .landing .text {
+        width: var(--width-100);
+        top: 30%;
+    }
+    .landing .text .content {padding-left: 0%;}
+}
+
+.landing .text .content h2 {
+    padding: 40px;
+    padding-top: 20px;
+    text-transform: var(--text-uppercase);
+    font-size: 30px;
+    line-height: 1.6;
+    color: var(--text-color);
+    font-weight: var(--font-weight);
+}
+
+.landing .text .content p {
+    line-height: 2.1;
+    padding-left: 50px;
+    margin-right: 50px;
+    font-size: 15px;
+    color: var(--text-color);
+} 
+
+.landing .change-back {
+    position: absolute;
+    font-size: 35px;
+    left: 0;
+    color: var(--text-color);
+    top: 50%;
+}
+
+.landing .change-back:hover {
+    color: var(--main-color);
+    cursor: var(--cursor-pointer);
+}
+
+.landing .change-front {
+    position: absolute;
+    font-size: 35px;
+    right: 0;
+    color: var(--text-color);
+    top: 50%;
+}
+
+.landing .change-front:hover {
+    color: var(--main-color);
+    cursor: var(--cursor-pointer);
+}
+
+.landing  .bullets{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    bottom: 30px;
+    display: flex;
+}
+
+.landing  .bullets li {
+    width: 15px;
+    height: 15px;
+    border: 2px solid var(--main-color);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin-right: 10px;
+}
+
+.landing  .bullets li.active {background-color: var(--main-color);}
+/********************************* End landing  *********************************/
+/****************************  Start Services  ****************************/
+.services {
+    padding-bottom: var(--standard-padding);
+    padding-top: var(--standard-padding);
+    background-color: var(--background-white);
+}
+
+.services .services-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px ,1fr));
+    grid-column-gap: 100px ;
+    grid-row-gap: 50px ;
+}
+
+@media  (max-width: 767px ){
+    .services .services-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px ,1fr));
+    }
+}
+
+.services .services-content .srv-box { display: flex;}
+
+@media  (max-width: 767px ){
+    .services .services-content .srv-box  {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .services .services-content .srv-box i {margin: 0 0 40px 10px;}
+}
+
+.services .services-content .text {
+    margin-left: 70px;
+    margin-bottom: 30px;
+}
+
+@media  (max-width: 767px ){.services .services-content .text {margin-left: 10px;}}
+
+.services .services-content .text h3 {
+    color: var(--main-color);
+    margin-bottom: 30px;
+}
+
+.services .services-content .text p {
+    color: var(--text-color2);
+    line-height: 1.7; 
+}
+/****************************  End Services ****************************/
+/* **************************** Start  Design /**************************** */
+.design {
+    padding-top: var(--standard-padding);
+    padding-bottom: var(--standard-padding);
+    background-color: var(--background-black);
+    color:var(--text-color);
+    position: relative;
+    height: 500px;
+    background-image: url(../wallpaperflare.com_wallpaper\ \(7\).jpg);
+}
+
+.design .text {
+    position: absolute;
+    background-color: rgba(14, 149, 186, 0.9);
+    right: 0;
+    top: 15%;
+    width: 40%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+@media (max-width: 767px) {
+    .design .text  {
+        width: var(--width-100);
+        top: 0%;
+    } 
+}
+
+.design .text .content {
+    margin-top: 50px;
+    margin-left: 50px;
+    color: var(--text-color);
+}
+
+.design .text .content h2 {
+    margin-bottom: 50px;
+    text-transform: var(--text-uppercase);
+    font-weight: var(--font-weight);
+}
+
+.design .text .content i {margin-right: 15px}
+
+.design .text .content p { margin-bottom: 20px;}
+
+.design .image-mobile {
+    width: 50%;
+    position: relative;
+} 
+
+@media (max-width: 767px){.design .image-mobile {left: 100px;}}
+
+.design .image-mobile img {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    left: 50%;
+}
+
+@media (max-width: 992px){.design .image-mobile img {left: 20%;}}
+
+@media (max-width: 767px){
+    .design .image-mobile img {
+        width: 200px;
+        height: 200px;
+        top: 200px;
+        text-align: center;
+    }
+}
+/* /**************************** End  Design  /**************************** */  
+/* /**************************** Start portfolio  *****************************/
+.portfolio {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: var(--background-white);
+}
+
+@media (max-width: 767px){.portfolio {padding-top:10px;}} 
+
+.portfolio  .click-ul {
+    width: 60%;
+    margin: 0 auto ;
+}
+
+@media (max-width: 767px){
+    .portfolio  .click-ul  {
+        width: var(--width-100);
+        margin: 0 ;
+    }
+} 
+
+.portfolio .click-ul ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height:50px;
+}
+
+@media (max-width: 767px){
+    .portfolio .click-ul ul {
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        gap: 5px;
+    }
+} 
+
+.portfolio .click-ul ul li {
+    color: var(--text-color2);
+    width: var(--width-100);
+    text-align: center;
+}
+
+.portfolio .click-ul ul li:hover {
+    background-color: var(--main-color);
+    border: 10px solid var(--main-color) ;
+    cursor: var(--cursor-pointer);
+    color: var(--background-white);
+}
+
+.portfolio .photo-portfolio {
+    padding-top: var(--standard-padding);
+    display: flex;
+    flex-wrap: wrap;
+}
+.portfolio .photo-portfolio .box {
+    position: relative;
+    overflow: hidden;
+}
+
+@media (min-width: 768px) {.portfolio .photo-portfolio .box  {flex-basis: 50%;}}
+
+@media (min-width: 1199px) {.portfolio .photo-portfolio .box  {flex-basis: 25%;}}
+
+.portfolio .photo-portfolio .box img {
+    max-width: var(--width-100);
+    border: 3px solid #eee;
+    cursor: var(--cursor-pointer);
+    height: 100%;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+.portfolio .photo-portfolio .box:hover img {
+    transform: rotate(3deg) scale(1.2);
+    -webkit-transform: rotate(3deg) scale(1.2);
+    -moz-transform: rotate(3deg) scale(1.2);
+    -ms-transform: rotate(3deg) scale(1.2);
+    -o-transform: rotate(3deg) scale(1.2);
+}  
+
+.portfolio .photo-portfolio .box .caption {
+    padding-left: 20px ;
+    position: absolute;
+    background-color: var(--background-white);
+    width: var(--width-100);
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    bottom: -100%;
+    left: 0;
+}
+
+.portfolio .photo-portfolio .box:hover .caption {bottom: 0;}  
+
+.portfolio .photo-portfolio .box .caption h4 {
+    font-weight: var(--font-weight);
+    padding-top: 5px;
+}
+
+.portfolio .photo-portfolio .box .caption p {
+    font-size: smaller;
+    padding-top: 5px;
+    padding-bottom: 15px;
+    color: var(--main-color);
+}
+
+.portfolio .more {
+    background-color:var(--main-color);
+    color: var(--background-white);
+    padding: 15px 20px;
+    display: block;
+    width: fit-content;
+    margin: 30px auto;
+    text-decoration: none;
+    text-transform: var(--text-uppercase);
+    border: 3px solid #eee;
+    transition: 0.3;
+    -webkit-transition: 0.3;
+    -moz-transition: 0.3;
+    -ms-transition: 0.3;
+    -o-transition: 0.3;
+}
+
+.portfolio .more:hover{
+    transform:  scale(1.2);
+    -webkit-transform:  scale(1.2);
+    -moz-transform:  scale(1.2);
+    -ms-transform:  scale(1.2);
+    -o-transform:  scale(1.2);
+}
+/* **************************** End Portfolio  /*****************************/
+/*  ***************************Start  Video  ****************************/
+.video {
+    padding-top: var(--standard-padding );
+    padding-bottom: var(--standard-padding);
+    background-image: url(../photos/wallpaperflare.com_wallpaper\ \(16\).jpg);
+    height: 500px;
+    position: relative;
+    background-size:cover;
+}
+
+.video  .content-video {
+    background-color: rgba(14, 149, 186, 0.9);
+    text-align: center;
+    height: 80%;
+    width: var(--width-100);
+}
+
+.video  .content-video .box {
+    padding-top: 30px;
+    padding-bottom: 50px;
+    color: var(--text-color);
+}
+
+.video  .content-video .box h2 {
+    padding-bottom: 20px;
+    font-weight: var(--font-weight);
+    text-transform: var(--text-uppercase);
+}
+
+.video  .content-video .see-more {
+    background-color: var(--background-black);
+    color: var(--text-color);
+    padding: 10px 15px;
+    text-decoration: none;
+    text-transform: var(--text-uppercase);
+    margin: 20px auto;
+    display: block;
+    width: fit-content;
+    border: 1px solid #eee;
+    transition: 0.3;
+    -webkit-transition: 0.3;
+    -moz-transition: 0.3;
+    -ms-transition: 0.3;
+    -o-transition: 0.3;
+}
+
+.video .see-more:hover {transform:  scale(1.2);}
+/* *************************** End Video ****************************/
+/* *************************** Start  About us ****************************/
+.About-us {
+    padding-top: var(--standard-padding);
+    padding-bottom: var(--standard-padding);
+    background-color: var(--background-white);
+}
+
+.About-us .About-image {text-align: center;}
+
+.About-us .About-image img {max-width: var(--width-100);}
+
+.About-degree {
+    padding-top: var(--standard-padding);
+    background-image: url(../photos/wallpaperflare.com_wallpaper\ \(17\).jpg);
+    width: var(--width-100);
+    height: 500px;
+    margin-top: -50px;
+}
+
+@media (max-width: 767px) { .About-degree{margin-top: -25px;}}
+
+.About-degree .box {
+    background-color: rgba(14, 149, 186, 0.9);
+    width: 80% ;
+    height: 250px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+@media (max-width: 767px) { .About-degree .box {width: var(--width-100);}}
+
+.About-degree .box .text {
+    width: 20%;
+    margin-top: 50px;
+}
+
+.About-degree .box .text i {
+    margin-bottom: 10px;
+    color: #06181C;
+}
+
+.About-degree .box .text h2 {
+    margin-bottom: 20px;
+    font-size: 60px;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+@media (max-width: 767px) { .About-degree .box .text h2 {font-size: large;}}
+
+@media (max-width: 992px) { .About-degree .box .text h2 {font-size:x-large;}}
+
+.About-degree .box .text p {
+    margin-bottom: 20px;
+    font-weight: var(--font-weight);
+    font-size: larger;
+    color: var(--text-color);
+}
+
+@media (max-width: 767px) { .About-degree .box .text p  {font-size: 15px;}}
+
+.About-us .tow-box {
+    padding-top: var(--standard-padding);
+    padding-bottom: var(--standard-padding);
+    display: grid;
+    grid-template-columns: 49% 49%;
+    gap: 100px;
+} 
+
+@media (max-width: 767px) { .About-us .tow-box  {grid-template-columns: 100%;}}
+
+.About-us .tow-box .testimonials {max-width: var(--width-100);}
+
+.About-us .tow-box .testimonials .text1 {text-align: center;}
+
+.About-us .tow-box .testimonials .text1 h2 {
+    margin-bottom: 30px;
+    text-transform: var(--text-uppercase);
+    font-weight: var(--font-weight);
+}
+
+.About-us .tow-box .testimonials .text1 p {
+    color: var(--text-color2);
+    margin-bottom: 50px;
+}
+
+.About-us .tow-box .testimonials .text2 {
+    display: grid;
+    grid-template-rows: 50% 50%;
+}
+
+.About-us .tow-box .testimonials .text2 .box1 {position: relative;}
+
+.About-us .tow-box .testimonials .text2 .box1 i {
+    position: absolute;
+    left: 40px;
+    top: 50px;
+}
+
+@media (max-width: 767px) { 
+    .About-us .tow-box .testimonials .text2 .box1 i {
+        left: 25px;
+        top: 50px;
+    }
+}
+
+.About-us .tow-box .testimonials .text2 .box1 p {
+    margin-left: 30%;
+    margin-bottom: 10%;
+    margin-top: 50px;
+    position: relative;
+}
+.About-us .tow-box .testimonials .text2 .box1 p::before {
+    content: "";
+    position: absolute;
+    background-color: black;
+    height: 2px;
+    width: var(--width-100);
+    top:70px;
+}
+
+@media (max-width: 767px) { 
+    .About-us .tow-box .testimonials .text2 .box1 p::before  {
+        top:100px;
+        width: 80%;
+    }
+}
+
+@media (max-width: 992px) { .About-us .tow-box .testimonials .text2 .box1 p::before  {top:100px;}}
+
+.About-us .tow-box .testimonials ul {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 767px) { .About-us .tow-box .testimonials ul {margin-top: 10px;}}
+
+.About-us .tow-box .testimonials ul li {
+    margin-left: 10px;
+    width: 15px;
+    height: 15px;
+    border: 1px solid black;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}  
+
+.About-us .tow-box .testimonials ul .active {background-color: var(--main-color);}
+
+.About-us .tow-box .testimonials ul li:hover {
+    background-color: var(--main-color);
+    cursor: var(--cursor-pointer);
+}
+
+.About-us .tow-box .testimonials .text2 .box2 p {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.About-us .tow-box .testimonials .text2 .box2 hr {width: 80%;} 
+
+.About-us .tow-box .our-skills {max-width: var(--width-100);}
+
+.About-us .tow-box .our-skills .text2  {text-align: center;}
+
+.About-us .tow-box .our-skills .text2  h2 {
+    margin-bottom: 30px;
+    text-transform: var(--text-uppercase);
+    font-weight: var(--font-weight);
+}
+
+.About-us .tow-box .our-skills .text2  p {
+    color: var(--text-color2);
+    margin-bottom: 50px;
+}
+
+.About-us .tow-box .our-skills .h3 {
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: var(--width-100);
+}
+
+@media (max-width: 767px) { 
+    .About-us .tow-box .our-skills .h3 {
+        height: 90%;
+        text-align: center;
+    }
+}
+
+.About-us .tow-box .our-skills .h3 h3 {
+    position: relative;
+    text-transform: var(--text-uppercase);
+    font-weight: var(--font-weight);
+}
+
+.About-us .tow-box .our-skills .h3 h3::before {
+    content: "";
+    position: absolute;
+    background-color: #eee;
+    width: 80%;
+    height: 20px;
+    left: 0;
+    top: 30px;
+}
+
+@media (max-width: 767px) { .About-us .tow-box .our-skills .h3 h3::before{width: var(--width-100);}}
+
+.About-us .tow-box .our-skills .h3 .h3-1 {position: relative;}
+
+.About-us .tow-box .our-skills .h3 .h3-1::after {
+    content: "";
+    position: absolute;
+    background-color: var(--main-color);
+    width: 65%;
+    height: 20px;
+    left: 0;
+    top: 30px;
+}
+
+.About-us .tow-box .our-skills .h3 .h3-2 {position: relative;}
+
+.About-us .tow-box .our-skills .h3 .h3-2::after {
+    content: "";
+    position: absolute;
+    background-color: var(--main-color);
+    width: 74%;
+    height: 20px;
+    left: 0;
+    top: 30px;
+}
+
+.About-us .tow-box .our-skills .h3 .h3-3 {position: relative;}
+
+.About-us .tow-box .our-skills .h3 .h3-3::after {
+    content: "";
+    position: absolute;
+    background-color: var(--main-color);
+    width: 45%;
+    height: 20px;
+    left: 0;
+    top: 30px;
+}
+
+.About-us .tow-box .our-skills .h3 .h3-4 {position: relative;}
+
+.About-us .tow-box .our-skills .h3 .h3-4::after {
+    content: "";
+    position: absolute;
+    background-color: var(--main-color);
+    width: 55%;
+    height: 20px;
+    left: 0;
+    top: 30px;
+}
+/*  *************************** End  About us  ****************************/ 
+/*  *************************** Start  john-doe   ****************************/
+.john-doe  {
+    padding-top: var(--standard-padding);
+    background-image: url(../photos/wallpaperflare.com_wallpaper\ \(20\).jpg);
+    height: 400px;
+    text-align: center;
+    position: relative;
+}
+
+.john-doe::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: var(--width-100);
+    height: 100%;
+    background-color: rgb(0 0 0 / 30%);
+}
+
+.john-doe .box {
+    color:var(--text-color);
+    max-width: 80%;
+    margin: 0 auto 0 auto;
+}
+
+.john-doe .box q {
+    text-transform: var(--text-uppercase);
+    font-weight: bold;
+    font-size: x-large;
+    letter-spacing: 1.6;
+    position: relative;
+    z-index: 1;
+}
+
+.john-doe .box p {
+    margin-top: 30px;
+    font-size: large;
+    position: relative;
+    z-index: 1;
+}
+/* **************************** End john-doe   /*****************************/
+/*  *************************** Start  Pricing  ****************************/
+.pricing {
+    padding-top: var(--standard-padding);
+    padding-bottom: 50px;
+    background-color: var(--background-white);
+}
+
+.pricing .pricing-content {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    text-align: center;
+    padding-top: 50px;
+    background-color: #fafafa;
+    
+}
+@media (max-width: 767px) { .pricing .pricing-content{grid-template-columns: auto auto;}}
+
+.pricing .pricing-content .box h2 {
+    text-transform: var(--text-uppercase);
+    padding-bottom: 10px;
+    font-weight: var(--font-weight);
+    position: relative;
+}
+
+.pricing .pricing-content .box h2::before {
+    content: "";
+    position: absolute;
+    background-color: var(--main-color);
+    width: 50%;
+    height: 2px;
+    left: 74px;
+    top: -20px;
+}
+
+@media (max-width: 1200px) { .pricing .pricing-content .box h2::before {left: 65px;}}
+
+@media (max-width: 992px) { .pricing .pricing-content .box h2::before {left: 50px;}}
+
+@media (max-width: 767px) { .pricing .pricing-content .box h2::before{display: none;}}
+
+.pricing .pricing-content .box h2::after {
+    content: "";
+    position: absolute;
+    background-color: var(--main-color);
+    width: 50%;
+    height: 2px;
+    left: 76px;
+    top: 125px;
+}
+
+@media (max-width: 1200px) { .pricing .pricing-content .box h2::after {left: 65px;}}
+
+@media (max-width: 992px) { .pricing .pricing-content .box h2::after {left: 50px;}}
+
+@media (max-width: 767px) { .pricing .pricing-content .box h2::after{display: none;}}
+
+.pricing .pricing-content .box h1 {
+    font-weight: bold;
+    font-size: 35px;
+    margin-bottom: 50px;
+}
+
+.pricing .pricing-content .box h1 span {font-size: 20px;}
+
+.pricing .pricing-content .box p {
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.pricing .pricing-content .box p::before {
+    content: "";
+    position: absolute;
+    background-color: var(--main-color);
+    width: 30%;
+    height: 2px;
+    left: 100px;
+    top: 35px;
+}
+
+@media (max-width: 1200px) { .pricing .pricing-content .box p::before {left: 80px;}}
+
+@media (max-width: 992px) { 
+    .pricing .pricing-content .box p::before {
+        width: 40%;
+        left: 55px;
+    }
+}
+
+@media (max-width: 767px) {.pricing .pricing-content .box p::before {display: none;}}
+
+.pricing .pricing-content .box a {
+    padding: 15px 20px;
+    background-color: var(--main-color);
+    text-decoration: none;
+    border: 3px solid #eee ;
+    text-transform: var(--text-uppercase);
+    display: block;
+    width: fit-content;
+    margin: 30px auto;
+    transition: 0.3;
+    -webkit-transition: 0.3;
+    -moz-transition: 0.3;
+    -ms-transition: 0.3;
+    -o-transition: 0.3;
+}
+
+.pricing .pricing-content .box a:hover {
+    transform:  scale(1.3) ;
+    -webkit-transform:  scale(1.3) ;
+    -moz-transform:  scale(1.3) ;
+    -ms-transform:  scale(1.3) ;
+    -o-transform:  scale(1.3) ;
+    color:var(--text-color);
+}
+
+.pricing .box-of-request {
+    text-align:center ;
+    margin-top: 50px;
+} 
+
+.pricing .box-of-request p {
+    columns: var(--text-color2);
+    padding-bottom: 30px;
+    text-transform: var(--text-uppercase);
+}
+
+.pricing .box-of-request .contact {
+    padding: 15px 20px;
+    background-color: var(--main-color);
+    color: var(--background-white);
+    text-decoration: none;
+    border: 3px solid #eee ;
+    text-transform: var(--text-uppercase);
+    display: block;
+    width: fit-content;
+    margin: 30px auto;
+    transition: 0.3;
+    -webkit-transition: 0.3;
+    -moz-transition: 0.3;
+    -ms-transition: 0.3;
+    -o-transition: 0.3;
+}
+
+.pricing .box-of-request .contact:hover {
+    transform:  scale(1.3) ;
+    -webkit-transform:  scale(1.3) ;
+    -moz-transform:  scale(1.3) ;
+    -ms-transform:  scale(1.3) ;
+    -o-transform:  scale(1.3) ;
+}
+/**************************** End  Pricing  ****************************/
+/**************************** Start subscribe ****************************/
+.subscribe {
+    padding-top: var(--standard-padding);
+    padding-bottom: var(--standard-padding);
+    background-image: url(../photos/wallpaperflare.com_wallpaper\ \(25\).jpg);
+    position: relative;
+}
+
+.subscribe::before {
+    content: "";
+    position: absolute;
+    width: var(--width-100);
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgb(0 0 0 / 30%);
+}
+
+.subscribe .container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+}
+
+@media (max-width: 992px) {.subscribe .container{ flex-direction: column;}}
+
+.subscribe  form {
+    width: 500px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    max-width: var(--width-100);
+}
+
+.subscribe  form i {
+    position: absolute;
+    top: 50%;
+    left: 15PX;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    color: var(--main-color);
+    font-size: 30px;
+}
+
+.subscribe form input[type="email"] {
+    height: 50px;
+    width: var(--width-100);
+    border: 2px solid var(--main-color);
+    border-right: none;
+    padding: 10px 20px 10px 50px;
+    background:none ;
+}
+
+.subscribe form input[type="submit"] {
+    border: 2px solid var(--main-color);
+    border-left: none;
+    padding: 10px 20px;
+    text-transform: var(--text-uppercase);
+    background-color: var(--main-color);
+    color: var(--background-white);
+    cursor: var(--cursor-pointer);
+    transition: 1.3;
+    -webkit-transition: 1.3;
+    -moz-transition: 1.3;
+    -ms-transition: 1.3;
+    -o-transition: 1.3;
+}
+
+.subscribe form input[type="submit"]:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+.subscribe form input[type="email"]:focus,
+.subscribe form input[type="submit"]:focus {outline: none;}
+
+.subscribe form ::placeholder {color: var(--text-color);}
+
+.subscribe p {
+    margin-top: 20px;
+    margin-left: 50px;
+    color: var(--text-color);
+    line-height: 1.7;
+}
+/**************************** End subscribe ****************************/
+/**************************** Start contact-us ****************************/
+.contact-us {
+    padding-bottom: var(--standard-padding);
+    padding-top: var(--standard-padding);
+    background-color: var(--background-white);
+}
+
+.contact-us .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: var(--width-100);
+    flex-wrap: wrap;
+}
+
+.contact-us .container form {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 63%;
+}
+
+@media  (max-width: 992px){.contact-us .container form {flex-basis: 100%;}}
+
+.contact-us .container form input[type="text"] {
+    margin-bottom: 20px;
+    padding: 10px 10px 10px 40px;
+    height: 60px;
+}
+
+.contact-us .container form input[type="email"] {
+    margin-bottom: 20px;
+    padding: 10px 10px 10px 40px;
+    height: 60px;
+}
+
+.contact-us .container form textarea {
+    margin-bottom: 20px;
+    padding: 15px 10px 10px 40px;
+    height: 180px;
+    resize: none;
+}
+
+.contact-us .container form input[type="text"]:focus,
+.contact-us .container form input[type="email"]:focus,
+.contact-us .container form textarea:focus {outline-color: var(--main-color);}
+
+.contact-us .container .text {flex-basis: 35%;}
+
+.contact-us .container .text .box {margin-bottom: 70px;}
+
+@media  (max-width: 992px){
+    .contact-us .container .text {
+        flex-basis: 100%;
+        text-align: center;
+        order: -1;
+    }
+    .contact-us .container .text .box  {margin-bottom: 25px;}
+}
+
+.contact-us .container .text .box h3 {
+    margin-bottom:10px;
+    text-transform: var(--text-uppercase);
+    font-weight: var(--font-weight);
+    color: var(--text-color2);
+}
+
+.contact-us .container .text .box p {
+    line-height: 1.7;
+    color: var(--text-color2);
+} 
+
+.contact-us .container a {
+    text-decoration: none;
+    display: block;
+    padding: 15px 20px ;
+    background-color: var(--main-color);
+    max-width: var(--width-100);
+    margin: 10px auto;
+    text-transform: var(--text-uppercase);
+    border: 1px solid #eee;
+    color: var(--background-white);
+    transition: 0.3;
+    -webkit-transition: 0.3;
+    -moz-transition: 0.3;
+    -ms-transition: 0.3;
+    -o-transition: 0.3;
+}
+
+.contact-us .container a:hover{
+    transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    -o-transform: scale(1.3);
+}
+/*  *************************** End  contact-us  ****************************/
+/*  *************************** Start  Footer  ****************************/
+.footer {
+    padding-top: calc(var(--standard-padding) / 2);
+    padding-bottom: calc(var(--standard-padding) / 2);
+    background-image: url(../photos/wallpaperflare.com_wallpaper\ \(30\).jpg);
+}
+
+.footer .content-footer {
+    width: var(--width-100);
+    text-align: center;
+}
+
+.footer .content-footer img {
+    width: 200px;
+    height: 80px;
+    margin-bottom: 50px;
+}
+
+.footer .content-footer .text {
+    color: var(--text-color);
+    width: 50%;
+    margin: 0 auto;
+}
+
+@media (max-width: 767px) {.footer .content-footer .text {width: var(--width-100);}}
+
+.footer .content-footer .text h2 {
+    padding-bottom: 20px;
+    margin-top: 50px;
+    font-weight: var(--font-weight);
+    letter-spacing: 2px;
+    border-bottom: 1px solid var(--main-color);
+    width: 200px;
+    margin: 0 auto;
+    text-transform: var(--text-uppercase);
+    color: var(--text-color);
+} 
+
+.footer .content-footer .icon {
+    text-align: center;
+    margin: 20px auto; 
+}
+
+.footer .content-footer .text i {
+    margin: 5px auto;
+    font-size: larger;
+    padding-right: 10px;
+    cursor: var(--cursor-pointer);
+}
+
+.footer .content-footer .text i:hover {color: var(--main-color);}
+
+.footer .content-footer .text p {
+    text-transform: var(--text-uppercase);
+    color: var(--text-color);
+    margin-top: 70px;
+}
+
+.footer .content-footer .text span {
+    color: var(--main-color);
+    font-weight: bold;
+}
+/**************************** End  Footer ****************************/
